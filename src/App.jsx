@@ -1,34 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import TooltipText from './tooltip/TooltipText'
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+  return(
+    <div className="App">
+      <p><TooltipText tooltip={"Texto generado"}>Lorem ipsum</TooltipText> dolor sit amet, consectetur adipiscing elit. Sed ille, ut dixi, votiose. Serepulum, inquam, abeunti; Duo Reges: constructio interrete. Tum mihi Piso: Quid ergo? Itaque contra est, ac dicitis; Prave, nequiter turpiter cenebat; Tamen a proposito, inquam, aberramus.</p>
+      <p>Si longus, levis dictata sunt. De quibus cupio scire quid sentias. Eam tum adesse, cum dolor omnis absit; Et ille ridens: Video, inquit, quid agas; Respondent extrema primis, media utrisque, omnia omnibus. Sed mehercule pergrata mihi oratio tua. Ratio quidam vestra sic cogit.</p>
+      <p>Videsne quam sit magna dissensio? Quod quidem iam fit etiam in <TooltipText tooltip={"soy un tooltip"}>Academia</TooltipText>. Respondeat totidem verbis. Neque solum ea communia, verum etiam paria esse dixerunt. Si quiequam extra habeatur in bonis</p>
+    </div>
   )
 }
 
